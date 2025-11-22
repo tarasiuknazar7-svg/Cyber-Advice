@@ -1,0 +1,35 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  background-image: url(/img/background.jpg);
+  background-size: 500% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.blur-bg {
+  height: 150px;
+  backdrop-filter: blur(2px);
+}
+
+h1 {
+  position: relative;
+  top: 20px;
+  color: white;
+  margin: 0px;
+}
+
+.main {
+  background-color: rgb(14, 14, 14);
+  height: 100vh;
+  color: rgb(211, 211, 211);
+}
+
+/*# sourceMappingURL=style.css.map */
