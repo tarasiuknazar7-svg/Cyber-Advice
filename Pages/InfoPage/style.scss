@@ -1,0 +1,47 @@
+%frame{
+    border-top:1px solid red;
+    border-bottom:1px solid red;
+    background-color: rgb(17, 17, 17);
+    box-shadow: 0 0 5px rgb(124, 0, 0);
+}
+$main-text-color: rgb(255, 255, 255);
+%display-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+$margin-frame: 0 auto 20px auto;
+
+body{margin: 0;
+    background-image: url(/img/background.jpg);
+    background-size:500% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+
+.header{
+    @extend %display-flex;
+h1{
+    color:$main-text-color;
+}
+}
+
+.main1{
+    @extend %frame;
+    height:100px;
+    margin:$margin-frame
+}
+
+.main2{
+    @extend %frame;
+    height:100px;
+    margin: $margin-frame
+}
+
+.main3{
+    @extend %frame;
+    height:100px;
+    margin: $margin-frame;
+}
+

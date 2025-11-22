@@ -1,0 +1,42 @@
+.main3, .main2, .main1 {
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+  background-color: rgb(17, 17, 17);
+  box-shadow: 0 0 5px rgb(124, 0, 0);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  background-image: url(/img/background.jpg);
+  background-size: 500% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header h1 {
+  color: rgb(255, 255, 255);
+}
+
+.main1 {
+  height: 100px;
+  margin: 0 auto 20px auto;
+}
+
+.main2 {
+  height: 100px;
+  margin: 0 auto 20px auto;
+}
+
+.main3 {
+  height: 100px;
+  margin: 0 auto 20px auto;
+}
+
+/*# sourceMappingURL=style.css.map */
