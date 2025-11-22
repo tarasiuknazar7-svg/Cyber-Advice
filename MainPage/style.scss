@@ -3,7 +3,32 @@ $main-text-color:rgb(211, 211, 211);
     color: red;
     text-shadow: 0 0 10px red;
     font-family:monospace;
-    font-size: 23px;
+    font-size:40px;
+}
+%blured-frame{
+    border:1px solid gray;
+    box-shadow: 0 0 5px gray;
+    border-radius: 10px;
+    background-color: rgba(17, 17, 17, 0.5);
+    backdrop-filter: blur(2px);
+}
+%flex-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%btn-style{
+    background:linear-gradient(90deg, rgb(75, 75, 255), rgb(31, 31, 255));
+    width:300px;
+    height:36px;
+    border:none;
+    border-radius: 4px;
+    cursor: pointer;
+    color:$main-text-color;
+    font-size:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body{margin: 0;
@@ -16,8 +41,7 @@ body{margin: 0;
 
 // Верхня "Шторка"
 .mobile-header{position: fixed;
-    display: flex;
-    justify-content: center;
+    @extend %flex-display;
     top: 0px;
     width: 100%;
     height: 90px;
@@ -37,25 +61,67 @@ body{margin: 0;
         rgba(14,14,14,0) 100%
     );
 h1{position: absolute;
-    top:10%;
+    top:-10px;
+    font-size:35px;
 }
 }
 
+
+
 // 1-ший вступний блок
-.main{position: relative;
+.main1{position: relative;
     height: max-content;
+    font-size:20px;
     top:90px;
     margin:auto 10px;
-    border:1px solid gray;
-    box-shadow: 0 0 5px gray;
-    border-radius: 10px;
-    background-color: rgba(17, 17, 17, 0.5);
-    backdrop-filter: blur(2px);
     color: $main-text-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-.mobile-header-span{
+    @extend %blured-frame;
+.main-span1{
     @extend %highlighted-text-color;
 }
+}
+
+
+
+// 2-й вступний блок
+.main2{position: relative;
+    height: max-content;
+    top: 140px;
+    font-size:25px;
+    margin:auto 0px auto 50px;
+    padding:10px;
+    color:$main-text-color;
+    @extend %blured-frame;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right:none;
+.main-span2{
+    @extend %highlighted-text-color;
+    @extend %flex-display;
+}
+}
+
+
+
+// 3-й вступний блок
+.main3{position: relative;
+    height: max-content;
+    top: 190px;
+    font-size:25px;
+    margin:auto 50px auto 0px;
+    padding:10px;
+    color:$main-text-color;
+    @extend %blured-frame;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left:none;
+.main-span3{
+    @extend %highlighted-text-color;
+    @extend %flex-display;
+}
+}
+
+button{
+    @extend %btn-style;
+    margin:0 auto;
 }
