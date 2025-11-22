@@ -25,7 +25,6 @@ button {
   height: 36px;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
   color: rgb(211, 211, 211);
   font-size: 20px;
   display: flex;
@@ -49,7 +48,7 @@ body {
   height: 90px;
   font-size: 10px;
   color: rgb(211, 211, 211);
-  z-index: 1;
+  z-index: 2;
   background: linear-gradient(to bottom, rgb(14, 14, 14) 0%, rgb(14, 14, 14) 70%, rgba(14, 14, 14, 0.8) 80%, rgba(14, 14, 14, 0.7) 83%, rgba(14, 14, 14, 0.6) 86%, rgba(14, 14, 14, 0.5) 89%, rgba(14, 14, 14, 0.4) 92%, rgba(14, 14, 14, 0.3) 95%, rgba(14, 14, 14, 0) 100%);
 }
 .mobile-header h1 {
@@ -92,6 +91,55 @@ body {
 }
 button {
   margin: 0 auto;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger-menu div {
+  width: 37px;
+  height: 4px;
+  background: linear-gradient(90deg, rgb(255, 21, 21), rgb(255, 121, 31));
+  transition: 0.3s;
+  position: relative;
+  left: 160px;
+  top: -4px;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -290px;
+  width: 210px;
+  height: 100%;
+  background-color: rgb(28, 28, 28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 58px 10px;
+  gap: 22px;
+  transition: right 0.3s ease;
+  z-index: 1;
+  top: 50px;
+  font-size: 23px;
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: rgb(211, 211, 211);
+}
+
+.side-menu.active {
+  right: 0;
+}
+
+hr {
+  width: 100%;
+  color: rgb(158, 0, 0);
 }
 
 /*# sourceMappingURL=style.css.map */

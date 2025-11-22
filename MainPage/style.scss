@@ -23,7 +23,6 @@ $main-text-color:rgb(211, 211, 211);
     height:36px;
     border:none;
     border-radius: 4px;
-    cursor: pointer;
     color:$main-text-color;
     font-size:20px;
     display:flex;
@@ -47,7 +46,7 @@ body{margin: 0;
     height: 90px;
     font-size:10px;
     color: $main-text-color;
-    z-index: 1;
+    z-index: 2;
     background: linear-gradient(
         to bottom,
         rgb(14, 14, 14) 0%,
@@ -124,4 +123,53 @@ h1{position: absolute;
 button{
     @extend %btn-style;
     margin:0 auto;
+}
+
+// Бургер-меню
+.burger-menu{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger-menu div{
+  width: 37px;
+  height: 4px;
+  background:linear-gradient(90deg, rgb(255, 21, 21), rgb(255, 121, 31));
+  transition: 0.3s;
+  position: relative;
+  left:160px;
+  top:-4px;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -290px;
+  width: 210px;
+  height: 100%;
+  background-color: rgb(28, 28, 28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 58px 10px;
+  gap: 22px;
+  transition: right 0.3s ease;
+  z-index: 1;
+  top:50px;
+  font-size:23px;
+}
+
+.side-menu a{
+    text-decoration: none;
+    color: $main-text-color;
+}
+
+.side-menu.active {
+  right: 0;
+}
+
+hr{width:100%;
+    color:rgb(158, 0, 0);
 }
