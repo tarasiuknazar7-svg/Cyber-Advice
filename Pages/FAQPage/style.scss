@@ -1,0 +1,44 @@
+%frame{
+    border-top:1px solid red;
+    border-bottom:1px solid red;
+    background-color: rgb(17, 17, 17);
+    box-shadow: 0 0 5px rgb(124, 0, 0);
+}
+$main-text-color: rgb(255, 255, 255);
+%display-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{margin: 0;
+    background-image: url(/img/background.jpg);
+    background-size:500% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    backdrop-filter: blur(2px);
+    filter: blur(2px);
+    z-index: -1;
+}
+
+h1{
+    color:$main-text-color;
+    @extend %display-flex;
+    position: relative;
+}
+
+.nav-faq{
+    @extend %frame;
+    height:max-content;
+}
