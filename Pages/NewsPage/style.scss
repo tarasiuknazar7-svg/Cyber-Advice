@@ -1,0 +1,36 @@
+%flex-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+$main-text-color:rgb(211, 211, 211);
+
+body{margin: 0;
+    background-image: url(/img/background.jpg);
+    background-size:500% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+
+.blur-bg{
+    height:100px;
+    backdrop-filter: blur(2px);
+}
+
+h1{
+    position: relative;
+    top:23px;
+    color:white;
+    @extend %flex-display;
+    margin:0px;
+}
+
+.main{
+    background-color: rgb(14, 14, 14);
+    height:100vh;
+    color:$main-text-color;
+}
+
