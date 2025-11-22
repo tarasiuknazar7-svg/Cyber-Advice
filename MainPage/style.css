@@ -1,0 +1,50 @@
+.main .mobile-header-span {
+  color: red;
+  text-shadow: 0 0 10px red;
+  font-family: monospace;
+  font-size: 23px;
+}
+
+body {
+  margin: 0;
+  background-image: url(/img/background.jpg);
+  background-size: 500% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.mobile-header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 0px;
+  width: 100%;
+  height: 90px;
+  font-size: 10px;
+  color: rgb(211, 211, 211);
+  z-index: 1;
+  background: linear-gradient(to bottom, rgb(14, 14, 14) 0%, rgb(14, 14, 14) 70%, rgba(14, 14, 14, 0.8) 80%, rgba(14, 14, 14, 0.7) 83%, rgba(14, 14, 14, 0.6) 86%, rgba(14, 14, 14, 0.5) 89%, rgba(14, 14, 14, 0.4) 92%, rgba(14, 14, 14, 0.3) 95%, rgba(14, 14, 14, 0) 100%);
+}
+.mobile-header h1 {
+  position: absolute;
+  top: 10%;
+}
+
+.main {
+  position: relative;
+  height: max-content;
+  top: 90px;
+  margin: auto 10px;
+  border: 1px solid gray;
+  box-shadow: 0 0 5px gray;
+  border-radius: 10px;
+  background-color: rgba(17, 17, 17, 0.5);
+  backdrop-filter: blur(2px);
+  color: rgb(211, 211, 211);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */
