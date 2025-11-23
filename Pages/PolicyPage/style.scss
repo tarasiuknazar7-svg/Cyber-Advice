@@ -1,0 +1,23 @@
+%flex-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+$main-color-text:rgb(255, 255, 255);
+
+body{
+    margin:0;
+    background-color: rgb(17,17,17);
+}
+
+.header{
+    background-color: black;
+h1{
+    color:$main-color-text;
+    margin: 0;
+}
+}
+
+.main{
+    color:$main-color-text;
+}
