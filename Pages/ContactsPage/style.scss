@@ -1,0 +1,131 @@
+%flex-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+$main-color-text:rgb(255, 255, 255);
+
+body{
+    margin: 0;
+    background-image: url(/img/background.jpg);
+    background-size:500% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+
+// Верхня "Шторка"
+.mobile-header{position: fixed;
+    @extend %flex-display;
+    top: 0px;
+    width: 100%;
+    height: 90px;
+    font-size:10px;
+    color: $main-color-text;
+    z-index: 2;
+    background: linear-gradient(
+        to bottom,
+        rgb(14, 14, 14) 0%,
+        rgba(14,14,14,1) 70%,
+        rgba(14,14,14,0.8) 80%,
+        rgba(14,14,14,0.7) 83%,
+        rgba(14,14,14,0.6) 86%,
+        rgba(14,14,14,0.5) 89%,
+        rgba(14,14,14,0.4) 92%,
+        rgba(14,14,14,0.3) 95%,
+        rgba(14,14,14,0) 100%
+    );
+h1{position: absolute;
+    top:-10px;
+    font-size:35px;
+    color:$main-color-text;
+    margin: 0;
+    position: relative;
+    top:-8px;
+    font-size:35px;
+    left:20px;
+}
+}
+// 
+
+// Кола з посиланнями
+a{
+    @extend %flex-display;
+}
+
+.a-top{
+    margin-top:120px;
+}
+
+.a-bottom{
+    margin-bottom: 10%;
+}
+
+img{width:80px;
+    height:80px;
+}
+
+.circle{  
+    background-color: rgb(17,17,17);
+    border:1px solid red;
+    box-shadow: 0 0 15px red;
+    border-radius: 50%;
+    width:150px;
+    height:150px;
+    margin:30px;
+    @extend %flex-display;
+}
+// 
+
+// Бургер-меню
+.burger-menu{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger-menu div{
+  width: 37px;
+  height: 4px;
+  background:linear-gradient(90deg, rgb(255, 21, 21), rgb(255, 121, 31));
+  transition: 0.3s;
+  position: relative;
+  left:72px;
+  top:-4px;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -290px;
+  width: 210px;
+  height: 100%;
+  background-color: rgb(28, 28, 28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 58px 10px;
+  gap: 7px;
+  transition: right 0.3s ease;
+  z-index: 1;
+  top:35px;
+  font-size:23px;
+  overflow-x: auto;  
+}
+
+.side-menu a{
+    text-decoration: none;
+    color: $main-color-text;
+}
+
+.side-menu.active {
+  right: 0;
+}
+
+hr{width:100%;
+    color:rgb(158, 0, 0);
+}
+
+.a3{margin-left: 38px;}
+// 
