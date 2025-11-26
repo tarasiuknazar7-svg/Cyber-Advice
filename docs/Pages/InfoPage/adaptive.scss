@@ -1,0 +1,23 @@
+%frame{
+    border-top:1px solid red;
+    border-bottom:1px solid red;
+    background-color: rgb(17, 17, 17);
+    box-shadow: 0 0 15px rgb(124, 0, 0);
+}
+$main-text-color: rgb(255, 255, 255);
+%display-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+$margin-frame: 120px auto 50px auto;
+
+@media (min-width:1440px) {
+    h1{
+        left:835px;
+    }
+    .burger-menu div{
+        position: relative;
+        left:1500px;
+    }
+}

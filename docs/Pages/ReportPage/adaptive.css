@@ -1,0 +1,12 @@
+@media (min-width: 1440px) {
+  .burger-menu div {
+    position: relative;
+    left: 830px;
+  }
+  .main {
+    width: 350px;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=adaptive.css.map */
