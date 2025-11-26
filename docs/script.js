@@ -6,9 +6,9 @@ burger.addEventListener('click', () => {
 });
 
 document.getElementById('go1').addEventListener('click', function() {
-    window.location.href = '../Pages/CoursePage/course.html';
+    window.location.href = './Pages/CoursePage/course.html';
 });
 
 document.getElementById('go2').addEventListener('click', function() {
-    window.location.href = '../Pages/NewsPage/news.html';
+    window.location.href = './Pages/NewsPage/news.html';
 });
