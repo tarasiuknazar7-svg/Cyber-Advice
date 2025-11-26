@@ -1,0 +1,13 @@
+@media (min-width: 1440px) {
+  .discord, .telegram, .tiktok {
+    border: 1px solid red;
+    background-color: rgb(17, 17, 17);
+    box-shadow: 0 0 5px rgb(124, 0, 0);
+    width: 400px;
+  }
+  .burger-menu div {
+    left: 900px;
+  }
+}
+
+/*# sourceMappingURL=adaptive.css.map */

@@ -1,0 +1,33 @@
+@mixin flex-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+$main-text-color:rgb(211, 211, 211);
+@mixin blured-frame{
+    border:1px solid gray;
+    box-shadow: 0 0 5px gray;
+    border-radius: 10px;
+    background-color: rgba(17, 17, 17, 0.5);
+    backdrop-filter: blur(2px);
+}
+@mixin highlighted-text-color{
+    color: red;
+    text-shadow: 0 0 10px red;
+    font-family:monospace;
+    font-size:40px;
+}
+
+@media (min-width: 1440px) {
+.main1, .main2, .main3{
+    width:500px;
+    margin:0 auto;
+}
+p{
+    @include flex-display()
+}
+.burger-menu div{
+    display:flex;
+    left:900px;
+}
+}
