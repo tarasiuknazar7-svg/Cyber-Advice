@@ -1,14 +1,25 @@
-%frame{
-    border-top:1px solid red;
-    border-bottom:1px solid red;
-    background-color: rgb(17, 17, 17);
-    box-shadow: 0 0 5px rgb(124, 0, 0);
-}
-$main-text-color: rgb(255, 255, 255);
-%display-flex{
+%flex-display{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+$main-text-color:rgb(211, 211, 211);
+
+%blured-frame{
+    border:1px solid gray;
+    box-shadow: 0 0 5px gray;
+    border-radius: 10px;
+    background-color: rgba(17, 17, 17, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+%highlighted-text-color{
+    color: red;
+    text-shadow: 0 0 10px red;
+    font-family:monospace;
+    font-size:40px;
 }
 
 body{margin: 0;
@@ -19,22 +30,8 @@ body{margin: 0;
     background-attachment:fixed;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    backdrop-filter: blur(2px);
-    filter: blur(2px);
-    z-index: -1;
-}
-
 // Верхня "Шторка"
 .mobile-header{position: fixed;
-    @extend %display-flex;
     top: 0px;
     width: 100%;
     height: 90px;
@@ -53,40 +50,12 @@ body::before {
         rgba(14,14,14,0.3) 95%,
         rgba(14,14,14,0) 100%
     );
-h1{position: absolute;
-    top:-10px;
-    font-size:35px;
-}
-}
-
-.discord, .telegram, .tiktok{
-    @extend %frame;
-    display: flex;               // важливо!
-    justify-content: flex-start; // картинка + текст зліва
-    align-items: center;         // вирівнювання по центру вертикалі
-    gap: 20px;                   // відступ між картинкою і текстом
-    height: 170px;
-    font-size: 25px;
-    text-shadow: 0 0 10px;
-    margin:auto auto 50px;
-}
-
-.discord a, .telegram a, .tiktok a{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 15px;
-    text-decoration: none;
-    color: $main-text-color;
-}
-
-.discord nav, .telegram nav, .tiktok nav{
+h1{@extend %flex-display;
     position: relative;
-    left:100px;
+    top:20px;
+    font-size:26px;
+    margin: 0;
 }
-
-img{height:90px;
-    width: 90px;
 }
 
 // Бургер-меню
@@ -95,6 +64,9 @@ img{height:90px;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  position: relative;
+  left:352px;
+  top:-6px;
 }
 
 .burger-menu div{
@@ -102,9 +74,6 @@ img{height:90px;
   height: 4px;
   background:linear-gradient(90deg, rgb(255, 21, 21), rgb(255, 121, 31));
   transition: 0.3s;
-  position: relative;
-  left:160px;
-  top:-4px;
 }
 
 .side-menu {
@@ -123,6 +92,7 @@ img{height:90px;
   z-index: 1;
   top:35px;
   font-size:23px;  
+  overflow: auto;
 }
 
 .side-menu a{
@@ -138,8 +108,65 @@ hr{width:100%;
     color:rgb(158, 0, 0);
 }
 
-.a3{margin-left: 38px;}
-
-.discord{
-    margin-top:140px;
+.blur-frame{
+    @extend %blured-frame;
+    height:200px;
+    color:$main-text-color;
+    position: relative;
+    top:120px;
+    margin:0 20px;
+& h2{
+    @extend %highlighted-text-color;
+    margin:15px auto;
+    @extend %flex-display;
 }
+& p{
+    margin:45px 10px;
+}
+}
+
+.nav-menu{
+    @extend %blured-frame;
+    margin: 0 20px;
+    position: relative;
+    top:150px;
+& a{
+    text-decoration: none;
+    text-shadow: 0 0 10px white;
+    color:$main-text-color;
+}
+& h2{
+    @extend %highlighted-text-color;
+    font-size: 25px;
+    @extend %flex-display;
+}
+ul{
+    color:$main-text-color;
+}
+}
+
+.main{
+    background-color: rgb(17, 17, 17);
+    position: relative;
+    top:180px;
+    height: max-content;
+    border-top: 1px solid red;
+}
+
+.main-h{
+    color:$main-text-color;
+    text-shadow: 0 0 3px rgb(174, 72, 0);
+& h3{
+    @extend %flex-display;
+    font-size: 20px;
+}
+& ul{
+    text-shadow: none;
+    margin: -10px 10px 10px -10px;
+}
+}
+
+html{
+    scroll-behavior: smooth;
+}
+

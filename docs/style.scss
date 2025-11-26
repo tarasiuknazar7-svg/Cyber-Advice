@@ -154,11 +154,12 @@ button{
   flex-direction: column;
   align-items: center;
   padding: 58px 10px;
-  gap: 22px;
+  gap: 7px;
   transition: right 0.3s ease;
   z-index: 1;
   top:50px;
   font-size:23px;
+  overflow: auto;
 }
 
 .side-menu a{
