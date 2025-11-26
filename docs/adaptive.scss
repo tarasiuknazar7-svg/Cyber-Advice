@@ -1,0 +1,44 @@
+$main-text-color:rgb(211, 211, 211);
+@mixin highlighted-text-color{
+    color: red;
+    text-shadow: 0 0 10px red;
+    font-family:monospace;
+    font-size:40px;
+}
+@mixin blured-frame{
+    border:1px solid gray;
+    box-shadow: 0 0 5px gray;
+    border-radius: 10px;
+    background-color: rgba(17, 17, 17, 0.5);
+    backdrop-filter: blur(2px);
+}
+@mixin flex-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin btn-style{
+    background:linear-gradient(90deg, rgb(75, 75, 255), rgb(31, 31, 255));
+    width:300px;
+    height:36px;
+    border:none;
+    border-radius: 4px;
+    color:$main-text-color;
+    font-size:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (min-width:1440px) {
+p{
+        @include flex-display();
+    }
+
+.burger-menu div{
+   display: flex;
+   left:900px;
+    }
+}
