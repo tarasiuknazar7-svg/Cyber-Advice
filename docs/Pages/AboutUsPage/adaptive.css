@@ -1,0 +1,17 @@
+@media (min-width: 1440px) {
+  .main1, .main2, .main3 {
+    width: 500px;
+    margin: 0 auto;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .burger-menu div {
+    display: flex;
+    left: 900px;
+  }
+}
+
+/*# sourceMappingURL=adaptive.css.map */

@@ -1,0 +1,30 @@
+$main-text-color:rgb(211, 211, 211);
+
+%blured-frame{
+    border:1px solid gray;
+    box-shadow: 0 0 5px gray;
+    border-radius: 10px;
+    background-color: rgba(17, 17, 17, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+%highlighted-text-color{
+    color: red;
+    text-shadow: 0 0 10px red;
+    font-family:monospace;
+    font-size:40px;
+}
+
+%flex-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width:1440px) {
+    .burger-menu div{
+        position: relative;
+        left:1490px;
+    }
+}

@@ -1,0 +1,21 @@
+@mixin frame{
+    border:1px solid red;
+    background-color: rgb(17, 17, 17);
+    box-shadow: 0 0 5px rgb(124, 0, 0);
+}
+$main-text-color: rgb(255, 255, 255);
+%display-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width:1440px) {
+    .discord, .telegram, .tiktok{
+        @include frame;
+        width:400px;
+    }
+    .burger-menu div{
+        left:900px;
+    }
+}
