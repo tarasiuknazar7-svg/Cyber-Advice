@@ -1,0 +1,24 @@
+@media (min-width: 1440px) {
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .burger-menu div {
+    display: flex;
+    left: 900px;
+  }
+}
+
+@media (min-width: 1650px) {
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .burger-menu div {
+    display: flex;
+    left: 800px;
+  }
+}
+/*# sourceMappingURL=adaptive.css.map */
