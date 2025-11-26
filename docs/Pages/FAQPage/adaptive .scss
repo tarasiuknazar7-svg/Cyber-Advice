@@ -1,0 +1,46 @@
+%frame{
+    border-top:1px solid red;
+    border-bottom:1px solid red;
+    background-color: rgb(17, 17, 17);
+    box-shadow: 0 0 5px rgb(124, 0, 0);
+}
+$main-text-color: rgb(255, 255, 255);
+%display-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%flex-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+%blured-frame{
+    border:1px solid gray;
+    box-shadow: 0 0 5px gray;
+    border-radius: 10px;
+    background-color: rgba(17, 17, 17, 0.5);
+    backdrop-filter: blur(2px);
+}
+%highlighted-text-color{
+    color: red;
+    text-shadow: 0 0 10px red;
+    font-family:monospace;
+    font-size:40px;
+}
+
+@media (min-width:1440px) {
+    .burger-menu div{
+        position: relative;
+        left:1490px;
+    }
+    .blur-frame{
+        width:500px;
+        margin:0 auto;
+    }
+    .nav-menu{
+        width:500px;
+        margin:0 auto;
+    }
+}
